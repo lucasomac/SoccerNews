@@ -3,18 +3,26 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/navigation_news">
+    app:startDestination="@+id/fragment_news">
 
     <fragment
-        android:id="@+id/navigation_news"
+        android:id="@+id/fragment_news"
         android:name="br.com.lucolimac.soccernews.ui.news.NewsFragment"
         android:label="@string/title_news"
-        tools:layout="@layout/fragment_news" />
+        tools:layout="@layout/fragment_news">
+        <action
+            android:id="@+id/action_navigate_from_news_to_favorites"
+            app:destination="@id/fragment_favorites" />
+    </fragment>
 
     <fragment
-        android:id="@+id/navigation_favorites"
+        android:id="@+id/fragment_favorites"
         android:name="br.com.lucolimac.soccernews.ui.favorites.FavoritesFragment"
         android:label="@string/title_favorites"
-        tools:layout="@layout/fragment_favorites" />
+        tools:layout="@layout/fragment_favorites">
+        <action
+            android:id="@+id/action_navigate_from_favorites_to_news"
+            app:destination="@id/fragment_news" />
+    </fragment>
 
 </navigation>
