@@ -3,4 +3,5 @@
     <string name="title_news">News</string>
     <string name="title_favorites">Favorites</string>
     <string name="button_open_link">Open Link</string>
+    <string name="message_no_favorites">Não existem favoritos para exibir. Volte a tela de news e adicione alguns!</string>
 </resources>
